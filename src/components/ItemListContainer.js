@@ -1,14 +1,9 @@
-const ItemListContainer = () => {
+const ItemListContainer = ({greetings}) => {
     return (
-        <>
-        <div className='shadow-md w-full h-screen flex justify-center items-center font-bold font-roboto text-black relative top-20 text-xl'>
-            <h2>¡Gracias por visitar enMarcados!</h2>
-       </div>
-        
-    </>
+        <div>
+            <h1> {greetings}</h1>
+        </div>
     );
 }
-
-
 
 export default ItemListContainer;

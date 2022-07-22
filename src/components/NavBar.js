@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from './CartWidget';
-import ItemListContainer from "./ItemListContainer";
+
 
 function ColorSchemesExample() {
   return (
@@ -21,7 +21,6 @@ function ColorSchemesExample() {
         </Container>
       </Navbar>
 
-      < ItemListContainer />
      </>
   );
 }
