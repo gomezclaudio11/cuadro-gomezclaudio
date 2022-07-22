@@ -1,5 +1,4 @@
 import { BsCart } from "react-icons/bs";
-import "../components/CartWidget.css";
 
 const CartWidget = () => {
     return ( 
