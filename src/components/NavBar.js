@@ -15,7 +15,6 @@ function ColorSchemesExample() {
             <Nav.Link href="#home">Inicio</Nav.Link>
             <Nav.Link href="#features">Musica</Nav.Link>
             <Nav.Link href="#pricing">Peliculas</Nav.Link>
-            <Nav.Link href="#pricing">Urbanismo</Nav.Link>
             <Nav.Link href="#pricing"> < CartWidget />  </Nav.Link>
           </Nav>
         </Container>
