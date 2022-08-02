@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 import ItemList from "./ItemList";
 import { data } from "../mock/FakeApi";
-import ItemCount from "./ItemCount"
 import { useParams } from "react-router-dom";
 
 const ItemListContainer = (props) => {
@@ -13,9 +12,7 @@ const ItemListContainer = (props) => {
     const [mensaje, setMensaje] = useState(false)
     const [loading, setLoading] = useState(true)
     const { category } = useParams();
-    const onAdd = (cantidad) =>{
-        setMensaje(`agregaste ${cantidad} items al carrito`)
-    }
+    
 
 
     useEffect(() => {
@@ -42,7 +39,7 @@ const ItemListContainer = (props) => {
           { mensaje &&  <p>{mensaje}</p>}
         {loading ? <p>Cargando...</p> : <ItemList listaProductos={listaProductos}/>}
            
-        <ItemCount initial={1} stock={5} onAdd={onAdd}/>
+        
         </div>
         </>
     );
