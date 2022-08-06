@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import ItemCount from './ItemCount';
+import { useNavigate } from "react-router-dom";
 
 const ItemDetail = ({item}) => {
+  const navigate = useNavigate();
   console.log("el item", item)
-  const onAdd = (cantidad) =>{
-    console.log(`agregaste ${cantidad} items al carrito`)
+  const [contador, setContador] = useState(0)
+  const onAdd = (quantityToAdd) =>{
+    console.log(`agregaste items al carrito: `, quantityToAdd);
+    setContador (quantityToAdd)
+    console.log(contador);
+    navigate ("/cart")
 }
 
   return (
