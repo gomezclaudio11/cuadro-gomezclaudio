@@ -18,8 +18,12 @@ function ColorSchemesExample() {
           <Link to={`/`}>
             <Nav.Link href="#home">Inicio</Nav.Link>
           </Link>
+          <Link to="/category/Music">
             <Nav.Link href="#features">Musica</Nav.Link>
+          </Link>
+          <Link to="/category/Movies">
             <Nav.Link href="#pricing">Peliculas</Nav.Link>
+          </Link> 
             <Nav.Link href="#pricing"> < CartWidget />  </Nav.Link>
           </Nav>
         </Container>

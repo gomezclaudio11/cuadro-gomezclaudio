@@ -32,14 +32,11 @@ const ItemListContainer = (props) => {
     console.log(listaProductos)
 
     return (
-        
         <>
         <div>
         <h2> {greetings}</h2>
           { mensaje &&  <p>{mensaje}</p>}
         {loading ? <p>Cargando...</p> : <ItemList listaProductos={listaProductos}/>}
-           
-        
         </div>
         </>
     );

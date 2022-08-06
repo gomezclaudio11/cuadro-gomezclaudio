@@ -8,7 +8,7 @@
          "price":"$ 4000", 
          "stock": "10", 
         "img":"https://i.postimg.cc/HLS09J6B/Bob-Marley.jpg", 
-         "categoria": "Music"
+         "categoria":"Music"
     },
     {
         "id": 2, 
@@ -19,7 +19,7 @@
            "price":"$ 4000",
             "stock":"15",
             "img": "https://i.postimg.cc/50Yz5sY2/Rolling-Stone.jpg",
-             "categoria": "Music"
+             "categoria":"Music"
     },
     {
         "id": 3,
@@ -30,7 +30,7 @@
           "price":"$ 8000", 
           "stock":"12",
           "img": "https://i.postimg.cc/Zqm8k8XV/batman.webp",
-           "categoria": "Movies"
+           "categoria":"Movies"
     },
     {
         "id": 4,
@@ -41,6 +41,6 @@
           "price":"$ 8000",
            "stock":"15",
            "img": "https://i.postimg.cc/DZXnqGw3/el-se-or-de-los-anillos.webp", 
-           "categoria": "Movies"
+           "categoria":"Movies"
     }
 ]

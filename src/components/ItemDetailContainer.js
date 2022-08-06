@@ -7,7 +7,7 @@ const ItemDetailContainer = () => {
 const [item, setItem] = useState({});
     console.log("item", item);
     const { id } = useParams();
-    console.log(id);
+    
  
     const getOneProduct = (id) => {
       fetch("../JSON/DataList.json")
