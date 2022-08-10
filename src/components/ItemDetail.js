@@ -1,22 +1,27 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import ItemCount from './ItemCount';
 import { useNavigate } from "react-router-dom";
+import { CartContext } from '../Context/CartContext';
 
 const ItemDetail = ({item}) => {
+const { addToCart } = useContext (CartContext)
+
   const navigate = useNavigate();
-  console.log("el item", item)
   const [contador, setContador] = useState(0)
+  
   const onAdd = (quantityToAdd) =>{
     console.log(`agregaste items al carrito: `, quantityToAdd);
     setContador (quantityToAdd)
-    console.log(contador);
+    addToCart (item, quantityToAdd)
     navigate ("/cart")
-}
+  }
+  useEffect (() =>{
+    console.log ({ contador })
+  }, [contador])
 
   return (
-
     <div >
       <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={item.img} />
@@ -33,8 +38,7 @@ const ItemDetail = ({item}) => {
       <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>
       </Card.Body>
     </Card>
-
-        </div>
+    </div>
     );
 
 }
