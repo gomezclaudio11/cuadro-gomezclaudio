@@ -23,8 +23,10 @@ function ColorSchemesExample() {
           </Link>
           <Link to="/category/Movies">
             <Nav.Link href="#pricing">Peliculas</Nav.Link>
-          </Link> 
+          </Link >
+          <Link to="/cart"> 
             <Nav.Link href="#pricing"> < CartWidget />  </Nav.Link>
+            </Link>
           </Nav>
         </Container>
       </Navbar>

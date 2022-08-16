@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom'
 
-function item({producto}) {
+function Item({producto}) {
     
   return (
     <Card style={{ width: '18rem' }}>
@@ -20,4 +20,4 @@ function item({producto}) {
   )
 }
 
-export default item
+export default Item
