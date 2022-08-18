@@ -1,12 +1,11 @@
-import React, { useContext } from 'react'
+import React, {useContext} from 'react'
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import { CartContext } from "../Context/CartContext";
 import { Link } from 'react-router-dom';
-import Toast from 'react-bootstrap/Toast';
 
 const Cart = () => {
-    const { cart, removeItem, clear } = useContext (CartContext)
+  const { cart, removeItem, clear, totalPrice } = useContext (CartContext)
 
 
   return (
@@ -16,7 +15,7 @@ const Cart = () => {
           <th>Producto</th>
           <th>Cantidad</th>
           <th>Precio</th>
-          <th>Total</th>
+          <th>Subtotal</th>
         </tr>
       </thead>
       <tbody>
@@ -33,6 +32,7 @@ const Cart = () => {
          )}
 
        
+        <span>Total a pagar : {totalPrice()}</span>
 
         <Button variant="light">
             <Link to={'/'}>  Volver a los productos </Link> 

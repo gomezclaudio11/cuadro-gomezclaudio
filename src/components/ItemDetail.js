@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react'
+import ItemCount from './ItemCount';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-import ItemCount from './ItemCount';
 import { useNavigate } from "react-router-dom";
-import { CartContext } from '../Context/CartContext';
+import { CartContext } from "../Context/CartContext"
 
 const ItemDetail = ({item}) => {
-const { addToCart } = useContext (CartContext)
+  const { addToCart } = useContext (CartContext)
 
   const navigate = useNavigate();
   const [contador, setContador] = useState(0)

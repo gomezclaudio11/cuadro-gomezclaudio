@@ -1,8 +1,7 @@
-
 import { useContext } from 'react';
 import { BsCart } from "react-icons/bs";
 import styled from 'styled-components';
-import { CartContext } from '../Context/CartContext';
+import { CartContext} from '../Context/CartContext';
 
 
 const StyledCount = styled.h5`
@@ -12,11 +11,12 @@ const StyledCount = styled.h5`
 `
 
 const CartWidget = () => {
+   
   const  { cartSize }= useContext(CartContext)
   return ( 
       <>
        < BsCart />
-       <StyledCount>{ cartSize ()}</StyledCount>
+       <StyledCount>{ cartSize () }</StyledCount>
       </>
      );
 }

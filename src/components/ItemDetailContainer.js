@@ -4,11 +4,10 @@ import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
     
-const [item, setItem] = useState({});
-    console.log("item", item);
-    const { id } = useParams();
-    
- 
+  const [item, setItem] = useState({});
+  console.log("item", item);
+  const { id } = useParams();    
+
     const getOneProduct = (id) => {
       fetch("../JSON/DataList.json")
           .then((response) => response.json())
@@ -26,5 +25,7 @@ const [item, setItem] = useState({});
   </div>
   )
 }
+
+ 
 
 export default ItemDetailContainer

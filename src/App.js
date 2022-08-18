@@ -13,6 +13,7 @@ const App = () => {
     <>
     <div className="App">
       <CartProvider>
+      
       < NavBar />
       <Routes>
       <Route path="/" element={<ItemListContainer greettings="Gracias por visitar enMarcados"/>} />
@@ -20,6 +21,7 @@ const App = () => {
       <Route path="/category/:category" element={<ItemListContainer/>} />
       <Route path='/cart' element={<Cart/>} />
       </Routes>
+     
       </CartProvider>
     </div>
     </>

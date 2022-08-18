@@ -4,9 +4,9 @@ import { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
-const ItemCount = ({initial, stock, onAdd}) => {
-    const [contador, setContador] = useState(initial)
-    const sumar = () => {
+const ItemCount = ({ initial, stock, onAdd }) => {
+  const [contador, setContador] = useState(initial)  
+  const sumar = () => {
       if(contador < stock){
         setContador(contador + 1)
       }

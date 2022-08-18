@@ -12,20 +12,20 @@ function ColorSchemesExample() {
       <Navbar bg="dark" variant="dark">
         <Container>
         <Link to={`/`}>
-          <Navbar.Brand href="#home">enMarcados</Navbar.Brand>
+          <Navbar.Brand >enMarcados</Navbar.Brand>
         </Link>
           <Nav className="me-auto">
           <Link to={`/`}>
-            <Nav.Link href="#home">Inicio</Nav.Link>
+            <Nav.Link >Inicio</Nav.Link>
           </Link>
           <Link to="/category/Music">
-            <Nav.Link href="#features">Musica</Nav.Link>
+            <Nav.Link>Musica</Nav.Link>
           </Link>
           <Link to="/category/Movies">
-            <Nav.Link href="#pricing">Peliculas</Nav.Link>
+            <Nav.Link>Peliculas</Nav.Link>
           </Link >
           <Link to="/cart"> 
-            <Nav.Link href="#pricing"> < CartWidget />  </Nav.Link>
+            <Nav.Link> < CartWidget />  </Nav.Link>
             </Link>
           </Nav>
         </Container>

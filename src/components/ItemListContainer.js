@@ -29,7 +29,7 @@ const ItemListContainer = (props) => {
     .catch(()=>setMensaje("hubo un error"))
     .finally (()=>setLoading(false))
 }, [category])//array de dependencia vacio para que se eyecute ua sola vez
-    console.log(listaProductos)
+    
 
     return (
         <>

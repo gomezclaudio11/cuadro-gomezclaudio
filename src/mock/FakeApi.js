@@ -16,4 +16,3 @@ export const data = new Promise ((resolve, reject)=> {
         }
     }, 3000);
 })
-console.log(data)
