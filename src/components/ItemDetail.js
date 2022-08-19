@@ -10,6 +10,7 @@ const ItemDetail = ({item}) => {
 
   const navigate = useNavigate();
   const [contador, setContador] = useState(0)
+  console.log({item})
   
   const onAdd = (quantityToAdd) =>{
     console.log(`agregaste items al carrito: `, quantityToAdd);
@@ -24,18 +25,18 @@ const ItemDetail = ({item}) => {
   return (
     <div >
       <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={item.img} />
+      <Card.Img variant="top" src={item.Img} />
       <Card.Body>
-        <Card.Title>{item.title}</Card.Title>
-        <Card.Text> {item.description}</Card.Text>
+        <Card.Title>{item.Name}</Card.Title>
+        <Card.Text> {item.Description}</Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroup.Item>Precio: {item.price}</ListGroup.Item>
-        <ListGroup.Item>{item.subtitle}</ListGroup.Item>
-        <ListGroup.Item>Medidas: {item.size}</ListGroup.Item>
+        <ListGroup.Item>Precio: {item.Price}</ListGroup.Item>
+        <ListGroup.Item>{item.Subtitle}</ListGroup.Item>
+        <ListGroup.Item>Medidas: {item.Size}</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-      <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>
+      <ItemCount initial="1" stock={item.Stock} onAdd={onAdd}/>
       </Card.Body>
     </Card>
     </div>

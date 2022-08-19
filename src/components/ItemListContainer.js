@@ -2,43 +2,54 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import ItemList from "./ItemList";
-import { data } from "../mock/FakeApi";
 import { useParams } from "react-router-dom";
+import { collection, getFirestore, getDocs, query, where} from "firebase/firestore"
 
 const ItemListContainer = (props) => {
     const {greetings} = props
 
-    const [listaProductos, setListaProductos] = useState ([])
-    const [mensaje, setMensaje] = useState(false)
-    const [loading, setLoading] = useState(true)
-    const { category } = useParams();
-    
+    const { Category } = useParams()
+  console.log(Category)
+  const [items, setItems] = useState([])
+  
 
 
-    useEffect(() => {
-     data
-     .then((res)=> {
-        if (category) {
-        setListaProductos(
-            res.filter((product) => product.categoria === category)
-        );
-        } else{
-            setListaProductos(res);
-        }
-    })
-    .catch(()=>setMensaje("hubo un error"))
-    .finally (()=>setLoading(false))
-}, [category])//array de dependencia vacio para que se eyecute ua sola vez
-    
+  useEffect(() => {
+    const db = getFirestore()
+
+    const itemsCollection = collection(db, 'items')
+      getDocs(itemsCollection)
+      .then((snapshot) => {
+        const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+        console.log(data)
+        setItems(data)
+      })
+      .catch((error) => console.error(error))
+  }, [])
+
+  useEffect(() => {
+    if (Category) {
+      const db = getFirestore()
+  
+      const itemsCollectionQuery = query(
+        collection(db, 'items'),
+        where('category', '==', Category)
+      )
+
+      getDocs(itemsCollectionQuery)
+        .then((snapshot) => {
+          const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+          setItems(data)
+        })
+        .catch((error) => console.error(error))
+    }
+  }, [Category])
 
     return (
-        <>
-        <div>
-        <h2> {greetings}</h2>
-          { mensaje &&  <p>{mensaje}</p>}
-        {loading ? <p>Cargando...</p> : <ItemList listaProductos={listaProductos}/>}
-        </div>
-        </>
+          <div>
+      <h3>{greetings}</h3>
+      <ItemList items={items} />
+    </div>
     );
 }
 

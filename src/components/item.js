@@ -1,21 +1,26 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
-function Item({producto}) {
-    
+const Item = ({ item }) => {
+  const navigate = useNavigate()
+
+  const handleClick =()=> {
+    navigate (`/item/${item.id}`)
+  }
+  
   return (
     <Card style={{ width: '18rem' }}>
-    <Card.Img variant="top" src={producto.img} />
+    <Card.Img variant="top" src={item.Img} />
     <Card.Body>
-      <Card.Title>{producto.name}</Card.Title>
-      <Card.Text>{producto.subtitle}</Card.Text>
-      <Card.Text>{producto.size}</Card.Text>
-      <Card.Text>{producto.price}</Card.Text>
-      <Link to={`/item/${producto.id}`}>
-      <Button variant="primary" >Ver mas</Button>
-      </Link>
-    </Card.Body>
+      <Card.Title>{item.Name}</Card.Title>
+      <Card.Text>{item.Subtitle}</Card.Text>
+      <Card.Text>{item.Size}</Card.Text>
+      <Card.Text>{item.Price}</Card.Text>
+      
+      <Button variant="primary" onClick={handleClick} >Ver mas</Button>
+      
+          </Card.Body>
   </Card>
   )
 }
