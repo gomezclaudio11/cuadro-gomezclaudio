@@ -8,8 +8,8 @@ import { collection, getFirestore, getDocs, query, where} from "firebase/firesto
 const ItemListContainer = (props) => {
     const {greetings} = props
 
-    const { Category } = useParams()
-  console.log(Category)
+    const { id } = useParams()
+  
   const [items, setItems] = useState([])
   
 
@@ -17,7 +17,7 @@ const ItemListContainer = (props) => {
   useEffect(() => {
     const db = getFirestore()
 
-    const itemsCollection = collection(db, 'items')
+    const itemsCollection = collection(db, "items")
       getDocs(itemsCollection)
       .then((snapshot) => {
         const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
@@ -28,12 +28,12 @@ const ItemListContainer = (props) => {
   }, [])
 
   useEffect(() => {
-    if (Category) {
+    if (id) {
       const db = getFirestore()
   
       const itemsCollectionQuery = query(
-        collection(db, 'items'),
-        where('category', '==', Category)
+        collection(db, "items"),
+        where("category", "==", id)
       )
 
       getDocs(itemsCollectionQuery)
@@ -43,7 +43,7 @@ const ItemListContainer = (props) => {
         })
         .catch((error) => console.error(error))
     }
-  }, [Category])
+  }, [id])
 
     return (
           <div>

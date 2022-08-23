@@ -25,18 +25,18 @@ const ItemDetail = ({item}) => {
   return (
     <div >
       <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={item.Img} />
+      <Card.Img variant="top" src={item.img} />
       <Card.Body>
-        <Card.Title>{item.Name}</Card.Title>
-        <Card.Text> {item.Description}</Card.Text>
+        <Card.Title>{item.name}</Card.Title>
+        <Card.Text> {item.description}</Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroup.Item>Precio: {item.Price}</ListGroup.Item>
-        <ListGroup.Item>{item.Subtitle}</ListGroup.Item>
-        <ListGroup.Item>Medidas: {item.Size}</ListGroup.Item>
+        <ListGroup.Item>Precio: {item.price}</ListGroup.Item>
+        <ListGroup.Item>{item.subtitle}</ListGroup.Item>
+        <ListGroup.Item>Medidas: {item.size}</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-      <ItemCount initial="1" stock={item.Stock} onAdd={onAdd}/>
+      <ItemCount initial="1" stock={item.stock} onAdd={onAdd}/>
       </Card.Body>
     </Card>
     </div>
