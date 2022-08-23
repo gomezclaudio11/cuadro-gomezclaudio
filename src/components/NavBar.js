@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import CartWidget from './CartWidget';
+import Categories from './Categories';
 
 
 function ColorSchemesExample() {
@@ -15,15 +16,9 @@ function ColorSchemesExample() {
           <Navbar.Brand >enMarcados</Navbar.Brand>
         </Link>
           <Nav className="me-auto">
-          <Link to={`/`}>
-            <Nav.Link >Inicio</Nav.Link>
-          </Link>
-          <Link to="/category/Music">
-            <Nav.Link>Musica</Nav.Link>
-          </Link>
-          <Link to="/category/Movies">
-            <Nav.Link>Peliculas</Nav.Link>
-          </Link >
+          <ul className="navbar-nav me-auto">
+            <Categories />
+            </ul >
           <Link to="/cart"> 
             <Nav.Link> < CartWidget />  </Nav.Link>
             </Link>
