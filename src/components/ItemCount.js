@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 const ItemCount = ({ initial, stock, onAdd }) => {
-  const [contador, setContador] = useState(initial)  
+  const [contador, setContador] = useState(parseInt(initial))  
   const sumar = () => {
       if(contador < stock){
         setContador(contador + 1)

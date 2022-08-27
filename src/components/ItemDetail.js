@@ -36,7 +36,7 @@ const ItemDetail = ({item}) => {
         <ListGroup.Item>Medidas: {item.size}</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-      <ItemCount initial="1" stock={item.stock} onAdd={onAdd}/>
+      <ItemCount initial= "1" stock={item.stock} onAdd={onAdd}/>
       </Card.Body>
     </Card>
     </div>

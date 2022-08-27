@@ -2,11 +2,11 @@ import React, {useContext} from 'react'
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import { CartContext } from "../Context/CartContext";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Cart = () => {
   const { cart, removeItem, clear, totalPrice } = useContext (CartContext)
-
+  const navegar = useNavigate()
 
   return (
     <Table striped bordered hover size="sm">
@@ -37,7 +37,7 @@ const Cart = () => {
         <Button variant="light">
             <Link to={'/'}>  Volver a los productos </Link> 
         </Button>{' '}
-        <Button variant="success" onClick={clear}>Comprar</Button>{' '}
+        <Button variant="success" onClick={()=>navegar("/checkout")}>Comprar</Button>{' '}
         <Button variant="danger" onClick={clear}>Eliminar Producto</Button>{' '}
       </tbody>
     </Table>
