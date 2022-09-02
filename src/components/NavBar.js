@@ -7,26 +7,34 @@ import CartWidget from './CartWidget';
 import Categories from './Categories';
 
 
+
+
+
+
 function ColorSchemesExample() {
   return (
-    <>
-      <Navbar bg="dark" variant="dark">
-        <Container>
-        <Link to={`/`}>
-          <Navbar.Brand >enMarcados</Navbar.Brand>
-        </Link>
-          <Nav className="me-auto">
-          <ul className="navbar-nav me-auto">
-            <Categories />
-            </ul >
-          <Link to="/cart"> 
-            <Nav.Link> < CartWidget />  </Nav.Link>
+ 
+         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top"  >
+          <Container>
+            <Link to={`/`}>
+              <Navbar.Brand >enMarcados</Navbar.Brand>
             </Link>
-          </Nav>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+              <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto container-fluid" >
+            <ul className="navbar-nav me-auto">
+                <Categories />
+            </ul>
+            
+              <Link to="/cart"> 
+                <Nav.Link > < CartWidget />  </Nav.Link>
+              </Link>
+            </Nav>
+            </Navbar.Collapse>
         </Container>
-      </Navbar>
-
-     </>
+        </Navbar>
+     
+     
   );
 }
 

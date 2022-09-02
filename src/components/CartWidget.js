@@ -5,7 +5,7 @@ import { CartContext} from '../Context/CartContext';
 import { useNavigate } from 'react-router-dom';
 
 
-const StyledCount = styled.h5`
+const StyledCount = styled.h6`
   color: white;
   padding-top: 4px;
   margin-left: 4px;
@@ -14,6 +14,7 @@ const Wrapper = styled.div`
 display: flex;
 align-items: center;
 cursor: pointer;
+
 `
 
 const CartWidget = () => {
@@ -22,7 +23,7 @@ const CartWidget = () => {
   const navigate = useNavigate()
   const handleClick = () => navigate ("/cart")
   return ( 
-      <Wrapper onClick={handleClick}>
+      <Wrapper onClick={handleClick} >
        < BsCart />
        <StyledCount>{ cartSize () }</StyledCount>
       </Wrapper>

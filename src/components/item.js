@@ -10,13 +10,13 @@ const Item = ({ item }) => {
   }
   
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '15rem' }}>
     <Card.Img variant="top" src={item.img} />
     <Card.Body>
       <Card.Title>{item.name}</Card.Title>
       <Card.Text>{item.subtitle}</Card.Text>
-      <Card.Text>{item.size}</Card.Text>
-      <Card.Text>{item.price}</Card.Text>
+      <Card.Text>Medidas: {item.size}</Card.Text>
+      <Card.Text>Precio : $ {item.price}</Card.Text>
       
       <Button variant="primary" onClick={handleClick} >Ver mas</Button>
       
