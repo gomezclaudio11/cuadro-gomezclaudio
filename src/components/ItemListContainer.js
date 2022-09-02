@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { collection, getFirestore, getDocs, query, where} from "firebase/firestore"
+import Carrousel from "./Carrousel";
 
 const ItemListContainer = (props) => {
     const {greetings} = props
@@ -46,10 +47,13 @@ const ItemListContainer = (props) => {
   }, [id])
 
     return (
-          <div>
-      <h3>{greetings}</h3>
-      <ItemList items={items} />
-    </div>
+      <>
+      <Carrousel/>
+      <div>
+            <h3>{greetings}</h3>
+            <ItemList items={items} />
+          </div>
+          </>
     );
 }
 

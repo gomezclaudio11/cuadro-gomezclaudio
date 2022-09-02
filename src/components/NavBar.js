@@ -17,7 +17,7 @@ function ColorSchemesExample() {
          <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top"  >
           <Container>
             <Link to={`/`}>
-              <Navbar.Brand >enMarcados</Navbar.Brand>
+              <Navbar.Brand ><strong>enMarcados</strong></Navbar.Brand>
             </Link>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">

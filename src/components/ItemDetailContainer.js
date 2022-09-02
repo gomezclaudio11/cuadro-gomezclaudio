@@ -29,10 +29,14 @@ const ItemDetailContainer = () => {
   }, [id])
 
     return (
+      <>
+      <div className="d-flex justify-content-center align-self-center flex-wrap p-5">
+        {loading && <Spinner   animation="grow" />}
+      </div>
       <div>
-        {loading && <Spinner animation="grow" />}
-      {item && <ItemDetail item={item} />}
-  </div>
+        {item && <ItemDetail item={item} />}
+      </div>
+      </>
   )
 } 
 

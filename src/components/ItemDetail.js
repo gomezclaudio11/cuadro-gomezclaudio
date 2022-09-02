@@ -25,7 +25,7 @@ const ItemDetail = ({item}) => {
   return (
     <div >
       <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={item.img} />
+      <Card.Img className="img-fluid rounded-start" src={item.img} />
       <Card.Body>
         <Card.Title>{item.name}</Card.Title>
         <Card.Text> {item.description}</Card.Text>
