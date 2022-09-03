@@ -3,6 +3,10 @@ import React from 'react'
 import { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 
 const ItemCount = ({ initial, stock, onAdd }) => {
   const [contador, setContador] = useState(parseInt(initial))  
@@ -17,19 +21,21 @@ const ItemCount = ({ initial, stock, onAdd }) => {
       }
     }
     return (
-      <>
-      <div>
+      <Container>
+        <Row>
+      <Col>
     <ButtonGroup aria-label="Basic example">
       <Button variant="outline-success" onClick={restar}>-</Button>
       <Button variant="outline-success">{contador}</Button>
       <Button variant="outline-success" onClick={sumar}>+</Button>
     </ButtonGroup>
-    </div>
+    </Col>
     <br/>
-    <div>
+    <Col>
     <Button variant="success" onClick={()=>onAdd(contador)}>Agregar al carrito</Button>
-    </div>
-    </>
+    </Col>
+    </Row>
+    </Container>
   )
 }
 

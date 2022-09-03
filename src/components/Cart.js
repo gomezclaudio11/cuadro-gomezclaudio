@@ -3,13 +3,20 @@ import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import { CartContext } from "../Context/CartContext";
 import { Link, useNavigate } from 'react-router-dom';
+import { BsTrash } from "react-icons/bs";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
 const Cart = () => {
   const { cart, removeItem, clear, totalPrice } = useContext (CartContext)
   const navegar = useNavigate()
 
   return (
-    <Table striped bordered hover size="sm">
+    <>
+    <h3><strong>CARRITO DE COMPRAS</strong></h3>
+    <Container>
+    <Row className="justify-content-md-center">
+    <Table striped bordered hover size="sm" >
       <thead>
         <tr>
           <th>Producto</th>
@@ -26,13 +33,13 @@ const Cart = () => {
           <td>{item.price}</td>
           <td>{item.price * item.quantity}</td>
           <td>
-          <button onClick={()=>removeItem(item.id)}>Borrar item</button>
+          <Button variant="light" onClick={()=>removeItem(item.id)}><BsTrash/></Button>
           </td>
         </tr>
          )}
 
        
-        <span>Total a pagar : {totalPrice()}</span>
+        <h5><strong>Total a pagar : $ {totalPrice()}</strong></h5>
 
         <Button variant="light">
             <Link to={'/'}>  Volver a los productos </Link> 
@@ -41,6 +48,9 @@ const Cart = () => {
         <Button variant="danger" onClick={clear}>Eliminar Producto</Button>{' '}
       </tbody>
     </Table>
+    </Row>
+    </Container>
+    </>
   )
 }
 

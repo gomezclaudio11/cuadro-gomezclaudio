@@ -14,7 +14,7 @@ const Item = ({ item }) => {
   return (    
       <CardGroup>
         <Card className="text-center p-1 m-2" style={{ width: '15rem'}}>
-         <Card.Img  className="rounded mx-auto img-fluid h-auto" variant="top" src={item.img} />
+         <Card.Img  className="rounded mx-auto img-fluid " variant="top" src={item.img} />
          <Card.Body>
             <Card.Title>{item.name}</Card.Title>
             <Card.Text>{item.subtitle}</Card.Text>
