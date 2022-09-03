@@ -64,7 +64,8 @@ const ItemDetail = ({item}) => {
             Somos fabricantes y nuestros enmarcados hacen la diferencia.
             Cada pedido lo realizamos especialmente para vos , el tiempo de producción aproximado es de 10 -15 días . 
             Precios retirando por el local . Fecha y horario a convenir . 
-            Escribinos a enMarcados@gmail.com para coordinar envíos a todo el país 
+            Escribinos a enMarcados@gmail.com para coordinar envíos a todo el país.
+            Para diseños personalizados realizar la consulta previamente. Podés también enviarnos tus imágenes en buena calidad para realizar el trabajo.
             *Las imágenes son ilustrativas
           </p>        
         </Col>
