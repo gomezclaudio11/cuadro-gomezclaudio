@@ -2,7 +2,7 @@
 
 ![Navegacion](https://postimg.cc/LJTPbBYx)
 
-> Tienda de Cuadros de posters de calidad y enmaracados de primera. Es una app diseñada para el proyecto final de CoderHouse, utilizando tecnologias HTML5, CSS REACT-JS
+> Tienda de Cuadros de posters de calidad y enmaracados de primera. Es una app diseñada para el proyecto final de CoderHouse, utilizando tecnologias HTML5, CSS REACT-JS 
 
 > Lista de tecnologías utilizadas en el proyecto:
 
