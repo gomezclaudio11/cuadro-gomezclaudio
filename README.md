@@ -1,6 +1,6 @@
 **enMarcados- Proyecto React Js**
 
-![Navegacion](https://i.postimg.cc/pdNBys2M/gif-Enmarcados.gif)
+![Navegacion](https://postimg.cc/LJTPbBYx)
 
 > Tienda de Cuadros de posters de calidad y enmaracados de primera. Es una app diseñada para el proyecto final de CoderHouse, utilizando tecnologias HTML5, CSS REACT-JS
 
