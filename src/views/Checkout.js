@@ -1,6 +1,14 @@
 import { addDoc, collection, getFirestore, serverTimestamp } from 'firebase/firestore'
 import React, { useContext, useState } from 'react'
 import { CartContext } from '../Context/CartContext'
+import Row from 'react-bootstrap/Row';
+import Stack from 'react-bootstrap/Stack';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
+
+
 
 const Checkout = () => {
     const [comprador, setComprador]= useState({})
@@ -40,22 +48,35 @@ const Checkout = () => {
   return (
     <>
    {!orderId 
-   ?<div>
-        <h2>Checkout</h2>
-        <form onSubmit={finalizarCompra}>
-        <input type="text" required placeholder='Nombre Completo' name='name'onChange={datosComprador} />
-            <input type="number"  placeholder='Numero de telefono' name='telefone'onChange={datosComprador} />
-            <input type="email"  placeholder='tumail@mail.com' name='email'onChange={datosComprador}/>
-            <button type='submit'>Finalizar Compra</button>
-        </form>
-    </div>
-    :<div>
-        <h2>Muchas gracias por su compra</h2>
-        <h3>Su orden es: {orderId}</h3>
-        <button>Volver a la home</button>
-    </div>}
+   ?<Row>
+        <h2><strong>Ingresa tu datos</strong></h2>
+            <form onSubmit={finalizarCompra}>
+                <Stack gap={3}  className="col-md-5 mx-auto">
+                    <Form.Control type="text" required placeholder='Nombre Completo' name='name'onChange={datosComprador} />
+                    <Form.Control type="number"  placeholder='Numero de telefono' name='telefone'onChange={datosComprador} />
+                    <Form.Control type="email"  placeholder='Direccion de e-mail' name='email'onChange={datosComprador}/>
+                    <Button variant="outline-secondary" id="button-addon1" type='submit'>Finalizar Compra</Button>
+                </Stack>
+            </form>
+    </Row>
+    :
+    <Card>
+    <Card.Header as="h5">Muchas gracias por su compra</Card.Header>
+    <Card.Body>
+      <Card.Title>Gracias por tu apoyo</Card.Title>
+      <Card.Text>
+      Su número de orden es: {orderId}.
+      </Card.Text>
+      <Link to={`/`} style={{ textDecoration: "none"}}>
+                    <Button variant="outline-secondary" id="button-addon1" type="submit"> Seguir comprando </Button>
+                </Link>
+            
+    </Card.Body>
+  </Card>
+     }
     </>
   )
 }
 
 export default Checkout
+
