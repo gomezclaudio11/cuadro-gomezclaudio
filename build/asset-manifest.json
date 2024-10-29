@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cuadro-gomezclaudio/build/static/css/main.621a6594.css",
+    "main.js": "/cuadro-gomezclaudio/build/static/js/main.5ae602c9.js",
+    "static/js/787.8410cc8a.chunk.js": "/cuadro-gomezclaudio/build/static/js/787.8410cc8a.chunk.js",
+    "index.html": "/cuadro-gomezclaudio/build/index.html",
+    "main.621a6594.css.map": "/cuadro-gomezclaudio/build/static/css/main.621a6594.css.map",
+    "main.5ae602c9.js.map": "/cuadro-gomezclaudio/build/static/js/main.5ae602c9.js.map",
+    "787.8410cc8a.chunk.js.map": "/cuadro-gomezclaudio/build/static/js/787.8410cc8a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.621a6594.css",
+    "static/js/main.5ae602c9.js"
+  ]
+}
